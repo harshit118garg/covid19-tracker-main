@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(27, 27, 27);
+}
+section {
+    margin-left: 10%;
+    margin-right: 10%;
+    /* background-color: blanchedalmond; */
+}
+.top {
+    background-color: rgb(27, 27, 27);
+    color: burlywood;
+    align-items: center;
+    text-align: center;
+}
+.animated1 {
+    position: relative;
+    animation: up-down 1000ms infinite ease-in-out alternate-reverse both;
+}
+@keyframes up-down {
+    0% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(-5px);
+    }
+}
+ul {
+    list-style: none;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 25px; 
+    height: 150px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 500ms;
+}
+.card_main {
+    text-align: center;
+    color: white;
+}
+.card_name {
+    margin-top: -10px;
+    margin-bottom: 5px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.card_name span {
+    font-size: 25px;
+    font-weight: 500;
+}
+.card_total {
+    margin-top: 0;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 60px;
+}
+.but {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    border-radius: 25px;
+    text-decoration: none;
+    height: 65px;
+    width: 250px;
+    font-size: 25px;
+	border: 0 none;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 0 5px 10px 5px;
+	font-weight: bold;
+    background: #27AE60;
+	color: white;
+}
+.btn:hover {
+    transition: 1s;
+    background: white;
+    color: #27AE60;
+}
+@media (max-width : 768px) {
+    section {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .grid-container {
+        grid-template-columns: auto;
+    }
+    .card {
+        height: 135px;
+        width: 220px;
+    }
+    .card_small {
+        font-size: 35px;
+    }
+}
